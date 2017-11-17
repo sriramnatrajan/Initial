@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/layout_bg"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_question"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:padding="16dp"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_question"
+        tools:ignore="ContentDescription"
+        android:layout_below="@+id/pl_switch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- <com.google.android.gms.ads.NativeExpressAdView
+         android:id="@+id/av_nativeAd"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         ads:adSize="360x132"
+         ads:adUnitId="@string/banner_ad_unit_id"
+         ads:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         />-->
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/pl_switch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pulse_color="@color/colorAccent"
+        app:pulse_count="10"
+        app:pulse_duration="7000"
+        app:pulse_interpolator="Decelerate"
+        app:pulse_repeat="0"
+        app:pulse_startFromScratch="true"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_switch"
+        android:layout_width="126dp"
+        android:layout_height="256dp"
+        android:background="@null"
+        android:padding="32dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_power"
+        tools:ignore="ContentDescription"
+        android:layout_marginTop="86dp"
+        android:layout_below="@+id/iv_question"
+        android:layout_toLeftOf="@+id/iv_question"
+        android:layout_toStartOf="@+id/iv_question"
+        android:layout_marginRight="84dp"
+        android:layout_marginEnd="84dp" />
+</RelativeLayout>
